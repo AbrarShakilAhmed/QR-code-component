@@ -6,65 +6,60 @@
   font-family: 'Outfit', sans-serif;
 }
 body {
-  background-color: #d5e1ef;
-  z-index: 2;
-}
-
-.container {
-  background-color: #fff;
-  width: 320px;
-  height: 500px;
-  padding: 15px;
-  margin: -50px auto;
-  transform: translateY(50%);
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 2px 2px 5px rgba(167, 167, 167, 0.699);
-  z-index: 2;
-}
-.container .qr-section {
-  background-color: #2c7dfa;
-  height: 288px;
-  width: 288px;
+  background-color: rgb(197, 255, 240);
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+}
+.container {
+  background-color: #fff;
+  max-width: 320px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.container .image-area {
+  background-color: #2c7dfa;
+  height: 280px;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
   position: relative;
-  z-index: 1;
   overflow: hidden;
+  border-radius: 10px;
 }
-.qr-section img {
-  z-index: 3;
+.container .text-area {
+  text-align: center;
 }
-
-.top-circle {
-  background-color: #3685ff;
-  height: 324px;
-  width: 324px;
-  z-index: 2;
-  position: absolute;
-  border-radius: 50%;
-  top: -166px;
-  left: -135px;
-}
-.bottom-circle {
-  background-color: #3685ff;
-  height: 270px;
-  width: 270px;
-  z-index: 2;
-  position: absolute;
-  border-radius: 50%;
-  bottom: -179px;
-  right: -140px;
-}
-
-.qr-text h1 {
-  color: #1f314f;
-  font-size: 22px;
+.container .text-area h1 {
   margin-top: 30px;
-  margin-bottom: 20px;
+  font-size: 22px;
 }
-.qr-text p {
-  color: #68778d;
-  font-size: 15px;
+.container .text-area p {
+  color: rgb(124, 124, 124);
+  margin: 20px 0;
+}
+.container .image-area::after {
+  content: '';
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  background-color: #3685ff;
+  z-index: -1;
+  top: -100px;
+  left: -100px;
+  border-radius: 50%;
+}
+.container .image-area::before {
+  content: '';
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  background-color: #3685ff;
+  z-index: -1;
+  bottom: -100px;
+  right: -100px;
+  border-radius: 50%;
 }
